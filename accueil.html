@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/c498a47d8b.js" crossorigin="anonymous"></script>
+    <title>Page d'accueil - Ohmyfood</title>
+</head>
+<body>
+
+    <!--Animation de chargement de la page d'accueil-->
+    <!-- <div class="loading">
+        <div class="loading__logo">
+            <div class="loading__letter">o</div>
+            <div class="loading__letter">h</div>
+            <div class="loading__letter">m</div>
+            <div class="loading__letter">y</div>
+            <div class="loading__letter">f</div>
+            <div class="loading__letter">o</div>
+            <div class="loading__letter">o</div>
+            <div class="loading__letter">d</div>
+        </div>
+        <div class="loading__spinner"></div>           
+    </div> -->
+
+     <!--Header-->
+     <header class="logo">
+        <h1 class="logo logo--header">ohmyfood</h1>
+     </header>
+
+     <!--Localisation-->
+    <div class="lieu">
+        <form method="post" action="#">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="search" name="recherche" class="lieu lieu__recherche" value="Paris, Belleville" />
+        </form>
+    </div>
+
+    <!--Section - explorer les restaurants-->
+    <section class="explorer">
+        <h1>Réservez le menu qui vous convient</h1>
+        <h2>Découvrez des restaurants d'exception sélectionnés par nos soins.</h2>
+        <a href="#restaurants" class="btn">Explorer nos restaurants</a>
+    </section>
+
+    <!--Section - Fonctionnement-->
+    <section class="fonctionnement">
+        <h1>Fonctionnement</h1>
+        <div class="fonctionnement__bulles">
+            <p class="bulle">
+                <span class="bulle__numero">1</span>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                Choisissez un restaurant
+            </p>
+            <p class="bulle">
+                <span class="bulle__numero">2</span>
+                <i class="fa-solid fa-list-ul"></i>
+                Composez votre menu
+            </p>
+            <p class="bulle bulle--rose">
+                <span class="bulle__numero">3</span>
+                <i class="fa-solid fa-store"></i>
+                Dégustez au restaurant
+            </p>
+        </div>
+    </section>
+
+    <!--Section - Restaurants-->
+    <section class="restaurants">
+        <h1>Restaurants</h1>
+        <div class="restaurant__vignettes">
+            <a href="#">
+                <figure class="vignette">
+
+                    <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo restaurant La palette du goût"/>
+                    <p class="vignette__nouveau">Nouveau</p>
+                    <figcaption>
+                        <div class="vignette__texte">
+                            <h3>La palette du goût</h2>
+                            <p>Ménilmontant</p>
+                        </div>
+                        <div class="vignette__coeur">
+                            <a href="#"><i class="fa-regular fa-heart"></i></a>
+                        </div>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </section>
+        
+     <!--Footer-->
+     <footer>
+        <div class="logo logo--footer">
+            ohmyfood
+        </div>
+        <div id="a-propos">
+            <ul>
+                <li>
+                    <a href=#>
+                    <i class="fa-solid fa-utensils"></i>
+                    Proposer un restaurant
+                    </a>
+                </li>
+                <li>
+                    <a href=#>
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    Devenir partenaire
+                    </a>
+                </li>
+                <li><a href=#>Mentions légales</a></li>
+                <li><a href=#>Contact</a></li>
+            </ul>
+        </div>
+     </footer>
+
+</body>
+</html>
