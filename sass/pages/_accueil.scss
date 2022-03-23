@@ -1,0 +1,87 @@
+.logo{
+    font-family: $font-logo;
+    margin: 0;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+
+    .logo--header{
+        text-align: center;
+        font-size: 35px;
+    }
+}
+
+.lieu{
+    background-color: rgb(226, 226, 226);
+    color: $color-bg-dark;
+    margin-top: 0;
+
+    form{
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
+    .fa-location-dot{
+        padding-right: 10px;
+    }
+    .lieu__recherche{
+        font-weight: 700;
+        padding: 10px 0 10px 0;
+        width: 125px;
+        border: none;
+    }
+}
+
+.explorer{
+    text-align: center;
+    background-color: $color-bg-light;
+    padding: 15px 15px 50px 15px;
+}
+
+.card-fct{
+    padding: 25px 15px 25px 40px;
+    margin: 0 25px 20px 35px;
+    position: relative;
+    background-color: $color-bg-light;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
+    font-weight: 700;
+
+    .card-fct__numero{
+        position: absolute;
+        left: -10px;
+        top: 20px;
+        padding: 5px 10px;
+        background-color: $color-primary;
+        color: white;
+        border-radius: 50%;
+    }
+    i{
+        color: $color-bg-dark;
+        margin-right: 20px;
+        position: relative;
+        top: 1px;
+    }
+    &.card-fct--rose{
+        background-color: $color-primary-light;
+        i{
+            color: $color-primary;
+        }
+    }
+}
+
+.card-resto{
+    margin: 0 10px 20px 0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
+    background-color: white;
+
+    img{
+        border-radius: 15px 15px 0 0;
+        height: 180px;
+        width: 100%;
+        object-fit: cover;
+    }
+    .card-resto__texte{
+
+    }
+}

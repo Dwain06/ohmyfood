@@ -1,44 +1,8 @@
 @import "./utils/variables";
 @import "./utils/keyframes";
 @import "./layouts/loading-spinner";
+@import "./base/base";
+@import "./components/_boutons";
+@import "./pages/accueil";
 
-* {
-    box-sizing: border-box;
-    .h1{
-        text-align: center;
-    }
-}
 
-body{
-    font-family: $font-primary;
-}
-
-.logo{
-    font-family: $font-logo;
-    margin: 0;
-    padding-top: 0.6rem;
-    padding-bottom: 0.8rem;
-
-    .logo--header{
-        text-align: center;
-        font-size: 35px;
-        box-shadow: 0 4px 5px rgb(185, 185, 185);
-    }
-}
-
-.lieu{
-    text-align: center;
-    background-color: rgb(226, 226, 226);
-    color: $color-4;
-    margin-top: 0;
-    padding-top: 0;
-
-    .fa-location-dot{
-        font-size: 20px;
-        margin-right: 20px;
-    }
-    .lieu__recherche{
-        font-weight: 700;
-        
-    }
-}

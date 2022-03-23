@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;800&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/c498a47d8b.js" crossorigin="anonymous"></script>
     <title>Page d'accueil - Ohmyfood</title>
@@ -45,27 +45,27 @@
 
     <!--Section - explorer les restaurants-->
     <section class="explorer">
-        <h1>Réservez le menu qui vous convient</h1>
-        <h2>Découvrez des restaurants d'exception sélectionnés par nos soins.</h2>
-        <a href="#restaurants" class="btn">Explorer nos restaurants</a>
+        <h2>Réservez le menu qui vous convient</h2>
+        <h3>Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+        <a href="#restaurants" class="btn-primary">Explorer nos restaurants</a>
     </section>
 
     <!--Section - Fonctionnement-->
     <section class="fonctionnement">
-        <h1>Fonctionnement</h1>
-        <div class="fonctionnement__bulles">
-            <p class="bulle">
-                <span class="bulle__numero">1</span>
+        <h2>Fonctionnement</h2>
+        <div class="fonctionnement__groupe">
+            <p class="card-fct">
+                <span class="card-fct__numero">1</span>
                 <i class="fa-solid fa-mobile-screen-button"></i>
                 Choisissez un restaurant
             </p>
-            <p class="bulle">
-                <span class="bulle__numero">2</span>
+            <p class="card-fct">
+                <span class="card-fct__numero">2</span>
                 <i class="fa-solid fa-list-ul"></i>
                 Composez votre menu
             </p>
-            <p class="bulle bulle--rose">
-                <span class="bulle__numero">3</span>
+            <p class="card-fct card-fct--rose">
+                <span class="card-fct__numero">3</span>
                 <i class="fa-solid fa-store"></i>
                 Dégustez au restaurant
             </p>
@@ -74,19 +74,18 @@
 
     <!--Section - Restaurants-->
     <section class="restaurants">
-        <h1>Restaurants</h1>
-        <div class="restaurant__vignettes">
+        <h2>Restaurants</h2>
+        <div class="restaurant__groupe">
             <a href="#">
-                <figure class="vignette">
-
+                <figure class="card-resto">
                     <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="Photo restaurant La palette du goût"/>
-                    <p class="vignette__nouveau">Nouveau</p>
+                    <p class="card-resto__nouveau">Nouveau</p>
                     <figcaption>
-                        <div class="vignette__texte">
-                            <h3>La palette du goût</h2>
+                        <div class="card-resto__texte">
+                            <h3>La palette du goût</h3>
                             <p>Ménilmontant</p>
                         </div>
-                        <div class="vignette__coeur">
+                        <div class="card-resto__coeur">
                             <a href="#"><i class="fa-regular fa-heart"></i></a>
                         </div>
                     </figcaption>
@@ -96,28 +95,24 @@
     </section>
         
      <!--Footer-->
-     <footer>
-        <div class="logo logo--footer">
-            ohmyfood
-        </div>
-        <div id="a-propos">
-            <ul>
-                <li>
-                    <a href=#>
-                    <i class="fa-solid fa-utensils"></i>
-                    Proposer un restaurant
-                    </a>
-                </li>
-                <li>
-                    <a href=#>
-                    <i class="fa-solid fa-handshake-angle"></i>
-                    Devenir partenaire
-                    </a>
-                </li>
-                <li><a href=#>Mentions légales</a></li>
-                <li><a href=#>Contact</a></li>
-            </ul>
-        </div>
+     <footer class="pied-page">
+        <h1 class="logo logo--footer">ohmyfood</h1>
+        <ul>
+            <li>
+                <a href=#>
+                <i class="fa-solid fa-utensils"></i>
+                Proposer un restaurant
+                </a>
+            </li>
+            <li>
+                <a href=#>
+                <i class="fa-solid fa-handshake-angle"></i>
+                Devenir partenaire
+                </a>
+            </li>
+            <li><a href=#>Mentions légales</a></li>
+            <li><a href=#>Contact</a></li>
+        </ul>
      </footer>
 
 </body>
