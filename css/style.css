@@ -44,19 +44,20 @@
   }
 }
 .loading {
+  font-family: sans-serif;
+  font-size: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(#FF79DA, #9356DC);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: sans-serif;
-  font-size: 30px;
   animation: fade-out 0.5s 3s linear forwards;
+  z-index: 1;
 }
 
 .loading__logo {
@@ -92,12 +93,12 @@
 }
 
 .loading__spinner {
-  height: 100px;
-  width: 100px;
   border: 3px solid transparent;
   border-top-color: #99E2D0;
   border-bottom-color: #99E2D0;
   border-radius: 50%;
+  height: 100px;
+  width: 100px;
   animation: loading 1s ease-in-out infinite;
 }
 
@@ -119,34 +120,45 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 i {
   font-size: 18px;
 }
 
-.btn-primary {
+a {
   text-decoration: none;
+  color: black;
+}
+
+.logo {
+  font-family: shrikhand, sans-serif;
+}
+
+.btn-primary {
   padding: 15px;
   border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(32, 32, 32, 0.5);
   color: white;
   background: linear-gradient(#FF79DA, #9356DC);
+  text-decoration: none;
 }
 
-.logo {
-  font-family: shrikhand, sans-serif;
-  margin: 0;
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-}
-.logo .logo--header {
+.logo--header {
+  margin-bottom: 10px;
+  font-size: 30px;
   text-align: center;
-  font-size: 35px;
 }
 
 .lieu {
-  background-color: #e2e2e2;
-  color: #464646;
-  margin-top: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  color: #272727;
+  background-color: #e6e6e6;
 }
 .lieu form {
   display: flex;
@@ -154,63 +166,142 @@ i {
   align-items: baseline;
 }
 .lieu .fa-location-dot {
-  padding-right: 10px;
+  margin-right: 10px;
 }
 .lieu .lieu__recherche {
-  font-weight: 700;
   padding: 10px 0 10px 0;
-  width: 125px;
   border: none;
+  font-weight: 700;
+  width: 125px;
 }
 
 .explorer {
-  text-align: center;
+  padding: 10px 20px 70px;
   background-color: whitesmoke;
-  padding: 15px 15px 50px 15px;
+  text-align: center;
+}
+.explorer h2 {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.explorer h3 {
+  margin-bottom: 45px;
+}
+
+.fonctionnement {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.fonctionnement h2 {
+  margin-top: 25px;
+  margin-bottom: 30px;
 }
 
 .card-fct {
   padding: 25px 15px 25px 40px;
-  margin: 0 25px 20px 35px;
-  position: relative;
-  background-color: whitesmoke;
+  margin-left: 10px;
+  margin-bottom: 20px;
   border-radius: 20px;
   box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
+  background-color: whitesmoke;
   font-weight: 700;
+  position: relative;
 }
 .card-fct .card-fct__numero {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: white;
+  font-weight: 400;
   position: absolute;
   left: -10px;
   top: 20px;
-  padding: 5px 10px;
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
 }
 .card-fct i {
-  color: #464646;
   margin-right: 20px;
+  color: #646464;
   position: relative;
   top: 1px;
 }
-.card-fct.card-fct--rose {
+.card-fct:hover {
   background-color: #ece3f8;
 }
-.card-fct.card-fct--rose i {
+.card-fct:hover i {
   color: #9356DC;
 }
 
+.restaurants {
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
 .card-resto {
-  margin: 0 10px 20px 0;
+  margin: 0 0 20px 0;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
   background-color: white;
+  position: relative;
 }
 .card-resto img {
   border-radius: 15px 15px 0 0;
   height: 180px;
   width: 100%;
   object-fit: cover;
+  object-position: 0 65%;
+}
+.card-resto--nouveau::before {
+  content: "Nouveau";
+  padding: 5px 10px;
+  border-radius: 3px;
+  background-color: #79dfa7;
+  color: #1f804f;
+  font-weight: 700;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.card-resto figcaption {
+  margin: 10px 25px 10px 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-resto__texte p {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+.card-resto__coeur i {
+  font-size: 25px;
+  color: #646464;
+}
+.card-resto__coeur i:hover {
+  font-weight: 700;
+  color: red;
+}
+
+.pied-page {
+  padding: 20px;
+  background-color: #272727;
+}
+.pied-page .logo--footer {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 18px;
+}
+.pied-page__groupe {
+  display: flex;
+  flex-direction: column;
+}
+.pied-page a {
+  color: white;
+  margin-bottom: 10px;
+}
+.pied-page .fa-utensils {
+  margin-right: 14px;
+}
+.pied-page .fa-handshake-angle {
+  margin-right: 8px;
 }
 
 /*# sourceMappingURL=style.css.map */
