@@ -1,0 +1,41 @@
+.pied-page{
+    padding: $padding-page;
+    background-color: $color-bg-dark;
+    
+    .logo--footer{
+        margin-bottom: 25px;
+        color: white;
+        font-size: 18px;
+    }
+    &__liens{
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        color: white;
+        margin-bottom: 10px;
+        width: fit-content;
+    }
+    .fa-utensils{
+        margin-right: 14px;
+    }
+    .fa-handshake-angle{
+        margin-right: 8px;
+    }
+}
+
+@media screen and (min-width: $break-point-mobile){
+
+    .pied-page{
+        &__groupe{
+            padding-left: 2rem;
+            padding-right: 2rem;
+            max-width: 1400px;
+            margin: auto;
+        }
+        &__liens{
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}

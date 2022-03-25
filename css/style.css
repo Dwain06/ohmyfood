@@ -102,6 +102,43 @@
   animation: loading 1s ease-in-out infinite;
 }
 
+.pied-page {
+  padding: 20px;
+  background-color: #272727;
+}
+.pied-page .logo--footer {
+  margin-bottom: 25px;
+  color: white;
+  font-size: 18px;
+}
+.pied-page__liens {
+  display: flex;
+  flex-direction: column;
+}
+.pied-page a {
+  color: white;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+.pied-page .fa-utensils {
+  margin-right: 14px;
+}
+.pied-page .fa-handshake-angle {
+  margin-right: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .pied-page__groupe {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 1400px;
+    margin: auto;
+  }
+  .pied-page__liens {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -126,6 +163,10 @@ h4 {
   font-weight: 700;
 }
 
+p {
+  margin: 0;
+}
+
 i {
   font-size: 18px;
 }
@@ -148,14 +189,20 @@ a {
   text-decoration: none;
 }
 
+.en-tete {
+  box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
+  position: relative;
+}
+
 .logo--header {
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
   font-size: 30px;
   text-align: center;
 }
 
 .lieu {
-  padding-top: 4px;
+  padding-top: 14px;
   padding-bottom: 4px;
   color: #272727;
   background-color: #e6e6e6;
@@ -236,6 +283,10 @@ a {
 }
 
 .card-resto {
+  position: relative;
+  width: 100%;
+}
+.card-resto__figure {
   margin: 0 0 20px 0;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
@@ -261,47 +312,126 @@ a {
   right: 15px;
 }
 .card-resto figcaption {
-  margin: 10px 25px 10px 15px;
-  padding-bottom: 15px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin: 10px;
+  padding-bottom: 10px;
 }
 .card-resto__texte p {
   margin-top: 5px;
   margin-bottom: 0;
+  padding-bottom: 0;
 }
 .card-resto__coeur i {
   font-size: 25px;
   color: #646464;
+  position: absolute;
+  top: 200px;
+  right: 15px;
 }
 .card-resto__coeur i:hover {
   font-weight: 700;
   color: red;
+  cursor: pointer;
 }
 
-.pied-page {
+@media screen and (min-width: 768px) {
+  .restaurants__groupe {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    max-width: 1400px;
+    margin: auto;
+  }
+  .restaurants__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card-resto {
+    margin: 20px;
+    width: 400px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonctionnement {
+    margin-right: 4rem;
+    width: 30%;
+  }
+
+  .restaurants {
+    width: 60%;
+  }
+}
+.menu-resto__photo img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: -1;
+}
+.menu-resto__plats {
   padding: 20px;
-  background-color: #272727;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: whitesmoke;
+  margin-top: -50px;
 }
-.pied-page .logo--footer {
-  margin-bottom: 25px;
-  color: white;
-  font-size: 18px;
-}
-.pied-page__groupe {
+
+.menu__titre {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.pied-page a {
-  color: white;
-  margin-bottom: 10px;
+.menu__titre h1 {
+  font-family: shrikhand, sans-serif;
+  font-size: 26px;
 }
-.pied-page .fa-utensils {
-  margin-right: 14px;
+.menu__coeur i {
+  font-size: 25px;
+  color: #646464;
 }
-.pied-page .fa-handshake-angle {
-  margin-right: 8px;
+.menu__coeur i:hover {
+  font-weight: 700;
+  color: red;
+  cursor: pointer;
+}
+.menu__sous-titre {
+  text-transform: uppercase;
+  width: 45px;
+  height: 30px;
+  border-bottom: 3px solid #99E2D0;
+}
+.menu__btn {
+  margin-top: 60px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.menu__btn .btn-primary {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.card-menu {
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
+  background-color: white;
+}
+.card-menu__titre {
+  padding: 15px 20px 5px 15px;
+}
+.card-menu__description {
+  padding: 0px 20px 10px 15px;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-menu .text-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-menu .prix-menu {
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
