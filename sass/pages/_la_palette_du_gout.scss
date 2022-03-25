@@ -56,25 +56,64 @@
 }
 
 .card-menu{
-    border-radius: 10px;
+    margin-bottom: 15px;
+    border-radius: 15px;
     box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
     background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
-    &__titre{
-        padding: 15px 20px 5px 15px;
-    }
     &__description{
-        padding: 0px 20px 10px 15px;
-        font-size: 15px;
-        @include flex-sb;
-    }
-    .text-hidden{
-        white-space: nowrap;
+        margin-right: -70px;
         overflow: hidden;
-        text-overflow: ellipsis;
+        transition: margin-right linear 0.4s;
+        h4{
+            padding: 15px 5px 5px 15px;
+        }
+        p{
+            padding: 0px 5px 10px 15px;
+            font-size: 15px;
+        }
+    }
+    &__prix{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        transform: translate(65px);
+        transition: transform ease-in-out 0.4s;
+
+        p{
+            padding: 15px 20px 12px 5px;
+            font-weight: 700;
+        }
+        .check_background{
+            padding: 25px 20px 22px 20px;
+            background-color: $color-tertiary;
+        }
+        i{
+            color: white;
+            font-size: 22px;
+            transform: rotate(0.5turn);
+            transition: transform ease-out 0.3s 0.2s;
+        }
+    }
+    &:hover .card-menu__prix{
+        transform: translate(0px);
+    }
+    &:hover i{
+        transform: rotate(0);
+    }
+    &:hover .card-menu__description{
+        margin-right: 0px; 
     }
 
-    .prix-menu{
-        font-weight: 700;
-    }
+}
+
+.text-hidden{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
