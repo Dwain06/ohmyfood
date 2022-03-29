@@ -122,18 +122,12 @@
             margin-top: 5px;
             margin-bottom: 0;
             padding-bottom: 0;
+            
     }
     &__coeur i{
-        font-size: 25px;
-        color: $color-bg-middle-dark;
         position: absolute;
         top: 200px;
-        right: 15px;     
-        &:hover{
-            font-weight: 700;
-            color: red;
-            cursor: pointer;
-        }
+        right: 15px;
     }
 }
 

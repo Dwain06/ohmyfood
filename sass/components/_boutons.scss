@@ -3,6 +3,29 @@
     border-radius: 25px;
     box-shadow: 2px 2px 5px rgba(32, 32, 32, 0.5);
     color: white;
-    background: linear-gradient($color-secondary, $color-primary);
-    text-decoration: none;
+    background : $gradient-primary;
+    opacity: 1;
+    transition: opacity ease .25s, box-shadow ease .25s;
+
+    &:hover{
+        opacity: 0.85;
+        box-shadow: 3px 3px 12px rgba(32, 32, 32, 0.9);
+        transition: opacity ease .5s, box-shadow ease 1s;
+    }
+}
+
+.fa-heart{
+    font-size: 25px;
+    color: $color-bg-middle-dark;
+    transition: transform cubic-bezier(.23,1.66,.75,-0.68) 0.8s;
+    cursor: pointer;
+
+        &:hover{
+            font-weight: 700;
+            color: transparent;
+            background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            transform: scale(1.2);
+        }
 }

@@ -1,0 +1,13 @@
+.menu__entrees, .menu__plats, .menu__desserts{
+    animation: slide-up 1.5s ease-out;
+}
+
+.card-menu{
+    animation: slide-up-card-menu ease-out;
+
+    @for $i from 1 through 3 {
+        &:nth-of-type(#{$i}n) {
+            animation-duration: ($i*0.5s);
+        }
+    }
+}

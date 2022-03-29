@@ -26,16 +26,6 @@
             font-size: 26px;
         }
     }
-    
-    &__coeur i{
-        font-size: 25px;
-        color: $color-bg-middle-dark;    
-        &:hover{
-            font-weight: 700;
-            color: red;
-            cursor: pointer;
-        }
-    }
 
     &__sous-titre{
         text-transform: uppercase;
@@ -97,7 +87,7 @@
             color: white;
             font-size: 22px;
             transform: rotate(0.5turn);
-            transition: transform ease-out 0.3s 0.2s;
+            transition: transform ease-out 0.4s 0.2s;
         }
     }
     &:hover .card-menu__prix{

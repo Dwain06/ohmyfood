@@ -43,10 +43,34 @@
     transform: scale(0);
   }
 }
+/*Animation menus*/
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes slide-up-card-menu {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .loading {
   font-family: sans-serif;
   font-size: 30px;
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
   position: absolute;
   top: 0;
   left: 0;
@@ -100,6 +124,23 @@
   height: 100px;
   width: 100px;
   animation: loading 1s ease-in-out infinite;
+}
+
+.menu__entrees, .menu__plats, .menu__desserts {
+  animation: slide-up 1.5s ease-out;
+}
+
+.card-menu {
+  animation: slide-up-card-menu ease-out;
+}
+.card-menu:nth-of-type(1n) {
+  animation-duration: 0.5s;
+}
+.card-menu:nth-of-type(2n) {
+  animation-duration: 1s;
+}
+.card-menu:nth-of-type(3n) {
+  animation-duration: 1.5s;
 }
 
 .pied-page {
@@ -185,8 +226,29 @@ a {
   border-radius: 25px;
   box-shadow: 2px 2px 5px rgba(32, 32, 32, 0.5);
   color: white;
-  background: linear-gradient(#FF79DA, #9356DC);
-  text-decoration: none;
+  background: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  opacity: 1;
+  transition: opacity ease 0.25s, box-shadow ease 0.25s;
+}
+.btn-primary:hover {
+  opacity: 0.85;
+  box-shadow: 3px 3px 12px rgba(32, 32, 32, 0.9);
+  transition: opacity ease 0.5s, box-shadow ease 1s;
+}
+
+.fa-heart {
+  font-size: 25px;
+  color: #646464;
+  transition: transform cubic-bezier(0.23, 1.66, 0.75, -0.68) 0.8s;
+  cursor: pointer;
+}
+.fa-heart:hover {
+  font-weight: 700;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: scale(1.2);
 }
 
 .en-tete {
@@ -321,16 +383,9 @@ a {
   padding-bottom: 0;
 }
 .card-resto__coeur i {
-  font-size: 25px;
-  color: #646464;
   position: absolute;
   top: 200px;
   right: 15px;
-}
-.card-resto__coeur i:hover {
-  font-weight: 700;
-  color: red;
-  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -384,15 +439,6 @@ a {
 .menu__titre h1 {
   font-family: shrikhand, sans-serif;
   font-size: 26px;
-}
-.menu__coeur i {
-  font-size: 25px;
-  color: #646464;
-}
-.menu__coeur i:hover {
-  font-weight: 700;
-  color: red;
-  cursor: pointer;
 }
 .menu__sous-titre {
   text-transform: uppercase;
@@ -452,7 +498,7 @@ a {
   color: white;
   font-size: 22px;
   transform: rotate(0.5turn);
-  transition: transform ease-out 0.3s 0.2s;
+  transition: transform ease-out 0.4s 0.2s;
 }
 .card-menu:hover .card-menu__prix {
   transform: translate(0px);
