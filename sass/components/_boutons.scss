@@ -14,18 +14,57 @@
     }
 }
 
-.fa-heart{
-    font-size: 25px;
-    color: $color-bg-middle-dark;
-    transition: transform cubic-bezier(.23,1.66,.75,-0.68) 0.8s;
+/* Bouton coeur */
+.menu__coeur{
     cursor: pointer;
 
-        &:hover{
-            font-weight: 700;
-            color: transparent;
-            background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
-            -webkit-background-clip: text;
-            background-clip: text;
-            transform: scale(1.2);
-        }
+    .fa-heart{
+        font-size: 25px;
+        color: $color-bg-middle-dark;
+        position: relative;
+        left: 20px;
+    }
+    .fa-heart-color{
+        font-weight: 700;
+        color: transparent;
+        background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        transform: scale(0);
+        position: relative;
+        left: -9px;
+        transition: transform ease-in-out 0.4s;
+        
+    }
+    &:hover .fa-heart-color{
+        transform: scale(1.1);
+        transition: transform ease-in-out 0.2s;
+    }
+}
+
+.card-resto__coeur{
+    cursor: pointer;
+
+    .fa-heart{
+        font-size: 25px;
+        color: $color-bg-middle-dark;
+        position: absolute;
+        top: 200px;
+        right: 15px;
+    }
+    .fa-heart-color{
+        font-weight: 700;
+        color: transparent;
+        background-image: linear-gradient(to bottom right, $color-secondary, $color-primary);
+        -webkit-background-clip: text;
+        background-clip: text;
+        transform: scale(0);
+        z-index: 10;
+        transition: transform ease-in-out 0.4s;
+        
+    }
+    &:hover .fa-heart-color{
+        transform: scale(1.1);
+        transition: transform ease-in-out 0.2s;
+    }
 }

@@ -1,14 +1,15 @@
 .en-tete{
+    padding-top: 20px;
     box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
     position: relative;
 }
 
 .logo--header{
     margin-bottom: 0;
+    margin-top: 0;
     padding-bottom: 10px;
     font-size: 30px;
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .lieu{
@@ -124,49 +125,58 @@
             padding-bottom: 0;
             
     }
-    &__coeur i{
-        position: absolute;
-        top: 200px;
-        right: 15px;
-    }
 }
-
 
 
 @media screen and (min-width: $break-point-mobile){
 
-    .restaurants{
+    .fonctionnement{
+        @include responsive-bloc;
+
         &__groupe{
-            padding-left: 8rem;
-            padding-right: 8rem;
-            max-width: 1400px;
-            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
         }
+    }
+
+    .card-fct{
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .restaurants{
+        padding-left: 0;
+        padding-right: 0;
+
+        &__groupe{
+            @include responsive-bloc;
+        }
+    
         &__cards{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            grid-gap: 10px;
         }
     }
 
     .card-resto{
-        margin: 20px;
-        width: 400px;
-        
+        margin: auto;
+        max-width: 450px;
     }
 }
 
 @media screen and (min-width: $break-point-tablet){
     
     .fonctionnement{
-       
-        margin-right: 4rem;
-        width: 30%;
+
+        &__groupe{
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
-    .restaurants{
-       
-        width: 60%;
+    .card-fct{
+        width: 95%;
     }
 }

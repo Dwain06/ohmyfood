@@ -16,6 +16,7 @@ $font-logo: shrikhand, sans-serif;
 $font-primary: roboto, sans-serif;
 
 $padding-page: 20px;
+$padding-page-responsive: 3rem;
 
 $gradient-primary: linear-gradient(to bottom right, $color-secondary, $color-primary);
 $gradient-primary-light: linear-gradient(to bottom right, lighten($color-secondary, 10%), lighten($color-primary, 10%));

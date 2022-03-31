@@ -161,6 +161,10 @@
   margin-bottom: 10px;
   width: fit-content;
 }
+.pied-page a:hover {
+  box-sizing: content-box;
+  border-bottom: 2px solid white;
+}
 .pied-page .fa-utensils {
   margin-right: 14px;
 }
@@ -170,8 +174,8 @@
 
 @media screen and (min-width: 768px) {
   .pied-page__groupe {
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     max-width: 1400px;
     margin: auto;
   }
@@ -219,6 +223,7 @@ a {
 
 .logo {
   font-family: shrikhand, sans-serif;
+  font-weight: 100;
 }
 
 .btn-primary {
@@ -236,28 +241,66 @@ a {
   transition: opacity ease 0.5s, box-shadow ease 1s;
 }
 
-.fa-heart {
-  font-size: 25px;
-  color: #646464;
-  transition: transform cubic-bezier(0.23, 1.66, 0.75, -0.68) 0.8s;
+/* Bouton coeur */
+.menu__coeur {
   cursor: pointer;
 }
-.fa-heart:hover {
+.menu__coeur .fa-heart {
+  font-size: 25px;
+  color: #646464;
+  position: relative;
+  left: 20px;
+}
+.menu__coeur .fa-heart-color {
   font-weight: 700;
   color: transparent;
   background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   background-clip: text;
-  transform: scale(1.2);
+  transform: scale(0);
+  position: relative;
+  left: -9px;
+  transition: transform ease-in-out 0.4s;
+}
+.menu__coeur:hover .fa-heart-color {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.2s;
+}
+
+.card-resto__coeur {
+  cursor: pointer;
+}
+.card-resto__coeur .fa-heart {
+  font-size: 25px;
+  color: #646464;
+  position: absolute;
+  top: 200px;
+  right: 15px;
+}
+.card-resto__coeur .fa-heart-color {
+  font-weight: 700;
+  color: transparent;
+  background-image: linear-gradient(to bottom right, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transform: scale(0);
+  z-index: 10;
+  transition: transform ease-in-out 0.4s;
+}
+.card-resto__coeur:hover .fa-heart-color {
+  transform: scale(1.1);
+  transition: transform ease-in-out 0.2s;
 }
 
 .en-tete {
+  padding-top: 20px;
   box-shadow: 0px 4px 8px rgba(32, 32, 32, 0.2);
   position: relative;
 }
 
 .logo--header {
   margin-bottom: 0;
+  margin-top: 0;
   padding-bottom: 10px;
   font-size: 30px;
   text-align: center;
@@ -382,40 +425,64 @@ a {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-.card-resto__coeur i {
-  position: absolute;
-  top: 200px;
-  right: 15px;
-}
 
 @media screen and (min-width: 768px) {
+  .fonctionnement {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 1400px;
+    margin: auto;
+  }
+  .fonctionnement__groupe {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .card-fct {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  .restaurants {
+    padding-left: 0;
+    padding-right: 0;
+  }
   .restaurants__groupe {
-    padding-left: 8rem;
-    padding-right: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
     max-width: 1400px;
     margin: auto;
   }
   .restaurants__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-gap: 10px;
   }
 
   .card-resto {
-    margin: 20px;
-    width: 400px;
+    margin: auto;
+    max-width: 450px;
   }
 }
 @media screen and (min-width: 992px) {
-  .fonctionnement {
-    margin-right: 4rem;
-    width: 30%;
+  .fonctionnement__groupe {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .restaurants {
-    width: 60%;
+  .card-fct {
+    width: 95%;
   }
 }
+.fa-arrow-left {
+  font-size: 20px;
+  color: #272727;
+  position: absolute;
+  left: 20px;
+  bottom: 18px;
+}
+
 .menu-resto__photo img {
   height: 250px;
   width: 100%;
@@ -439,6 +506,7 @@ a {
 .menu__titre h1 {
   font-family: shrikhand, sans-serif;
   font-size: 26px;
+  font-weight: 100;
 }
 .menu__sous-titre {
   text-transform: uppercase;
@@ -514,6 +582,42 @@ a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-resto__plats {
+    padding-left: 3rem;
+    padding-right: 3rem;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: -50px;
+  }
+  .menu-resto__groupe {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px;
+  }
+
+  .card-menu {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 450px;
+  }
+
+  .menu__sous-titre {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .menu-resto__groupe {
+    grid-template-columns: repeat(3, 33%);
+  }
+
+  .card-menu {
+    max-width: 350px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

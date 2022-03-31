@@ -15,6 +15,10 @@
         color: white;
         margin-bottom: 10px;
         width: fit-content;
+        &:hover{
+            box-sizing: content-box;
+            border-bottom: 2px solid white;
+        }
     }
     .fa-utensils{
         margin-right: 14px;
@@ -28,10 +32,7 @@
 
     .pied-page{
         &__groupe{
-            padding-left: 2rem;
-            padding-right: 2rem;
-            max-width: 1400px;
-            margin: auto;
+        @include responsive-bloc;
         }
         &__liens{
             flex-direction: row;

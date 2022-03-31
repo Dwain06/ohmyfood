@@ -1,3 +1,11 @@
+.fa-arrow-left{
+    font-size: 20px;
+    color: $color-bg-dark;
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+}
+
 .menu-resto{
 
     &__photo img{
@@ -24,6 +32,7 @@
         h1{
             font-family: $font-logo;
             font-size: 26px;
+            font-weight: 100;
         }
     }
 
@@ -106,4 +115,48 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media screen and (min-width: $break-point-mobile){
+
+    .menu-resto{
+
+        &__plats{
+            @include responsive-bloc;
+            margin-top: -50px;
+        }
+    
+        &__groupe{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 10px;
+        }
+    }
+
+    .card-menu{
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 450px;
+    }
+
+    .menu__sous-titre {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: $break-point-tablet){
+
+    .menu-resto{
+
+        &__groupe{
+            grid-template-columns: repeat(3, 33%);
+        }
+    }
+    
+    .card-menu{
+        max-width: 350px;
+    }
+    
 }
