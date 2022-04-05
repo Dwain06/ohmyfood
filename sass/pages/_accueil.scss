@@ -164,6 +164,17 @@
     .card-resto{
         margin: auto;
         max-width: 450px;
+
+        figure{
+            opacity: 1;
+            transition: opacity ease .25s, box-shadow ease .25s;
+        
+            &:hover{
+                opacity: 0.85;
+                box-shadow: 3px 3px 12px rgba(32, 32, 32, 0.9);
+                transition: opacity ease .5s, box-shadow ease 1s;
+            }
+        }
     }
 }
 

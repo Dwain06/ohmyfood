@@ -465,6 +465,15 @@ a {
     margin: auto;
     max-width: 450px;
   }
+  .card-resto figure {
+    opacity: 1;
+    transition: opacity ease 0.25s, box-shadow ease 0.25s;
+  }
+  .card-resto figure:hover {
+    opacity: 0.85;
+    box-shadow: 3px 3px 12px rgba(32, 32, 32, 0.9);
+    transition: opacity ease 0.5s, box-shadow ease 1s;
+  }
 }
 @media screen and (min-width: 992px) {
   .fonctionnement__groupe {
