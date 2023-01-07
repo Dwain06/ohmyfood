@@ -15,7 +15,7 @@ La cible étant les personnes connectées et pressées, le site sera développé
 - Les pages devront passer la validation W3C en HTML et CSS sans erreur.
 - Le site doit être parfaitement compatible avec les dernières versions desktop de Chrome et Firefox.
 
-## Livraibles demandés :
+## Livrables demandés :
 #### Contenu des pages
 ###### Page d’accueil (x1)
 - Affichage de la localisation des restaurants. À terme il sera possible de choisir sa localisation pour trouver des restaurants proches d’un certain lieu.
